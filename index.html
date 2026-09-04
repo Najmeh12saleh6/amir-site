@@ -9,7 +9,27 @@
 
     <title>Amir | امیر</title>
 
+
     <style>
+
+        /* =========================
+           FONT
+        ========================= */
+
+        @font-face {
+            font-family: 'B Roya';
+
+            src: url('fonts/B Roya_0.ttf')
+                 format('truetype');
+
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
 
         * {
             box-sizing: border-box;
@@ -17,72 +37,113 @@
             padding: 0;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
 
+
         body {
-            font-family: Tahoma, Arial, sans-serif;
+
+            font-family:
+                'B Roya',
+                Tahoma,
+                Arial,
+                sans-serif;
+
             background: #080a12;
+
             color: #ffffff;
-            line-height: 1.9;
+
+            line-height: 2;
         }
+
 
         /* =========================
            HEADER
         ========================= */
 
         header {
+
             position: sticky;
+
             top: 0;
+
             z-index: 1000;
 
-            background: rgba(8, 10, 18, 0.95);
+            background:
+                rgba(8, 10, 18, 0.94);
 
-            border-bottom: 1px solid #1c2340;
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #252d52;
 
             padding: 15px 7%;
 
             display: flex;
-            justify-content: space-between;
+
+            justify-content:
+                space-between;
+
             align-items: center;
         }
 
+
         .logo {
-            font-size: 25px;
+
+            font-size: 28px;
+
             font-weight: bold;
-            color: #ffffff;
+
+            color: white;
         }
+
 
         .logo span {
-            color: #4d8dff;
+
+            color: #5b8cff;
         }
 
+
         nav {
+
             display: flex;
+
             gap: 25px;
         }
 
+
         nav a {
+
             color: #c8cce0;
+
             text-decoration: none;
-            font-size: 14px;
+
+            font-size: 17px;
+
             transition: 0.3s;
         }
 
+
         nav a:hover {
-            color: #6d8cff;
+
+            color: #7197ff;
         }
+
 
         /* =========================
            HERO
         ========================= */
 
         .hero {
-            min-height: 650px;
+
+            min-height: 680px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             text-align: center;
@@ -90,322 +151,776 @@
             padding: 80px 20px;
 
             background:
-                radial-gradient(circle at 50% 30%, #17234c 0%, #0b0e1a 40%, #080a12 75%);
+
+                radial-gradient(
+                    circle at 50% 25%,
+                    #1b2c61 0%,
+                    #10162d 38%,
+                    #080a12 75%
+                );
         }
+
 
         .hero-content {
-            max-width: 750px;
+
+            max-width: 800px;
         }
 
-        .profile-circle {
-            width: 145px;
-            height: 145px;
 
-            margin: 0 auto 30px;
+        .profile-circle {
+
+            width: 175px;
+
+            height: 175px;
+
+            margin:
+                0 auto 30px;
 
             border-radius: 50%;
 
-            background: linear-gradient(135deg, #315edb, #6b35b8);
+            padding: 5px;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background:
 
-            font-size: 65px;
+                linear-gradient(
+                    135deg,
+                    #315edb,
+                    #7138c8,
+                    #315edb
+                );
 
             box-shadow:
-                0 0 35px rgba(66, 100, 255, 0.35);
+
+                0 0 35px
+                rgba(66, 100, 255, 0.4),
+
+                0 0 70px
+                rgba(113, 56, 200, 0.2);
         }
+
+
+        .profile-circle img {
+
+            width: 100%;
+
+            height: 100%;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            display: block;
+
+            border:
+                4px solid #080a12;
+        }
+
 
         .hero h1 {
+
             font-size: 55px;
-            margin-bottom: 10px;
+
+            margin-bottom: 5px;
         }
+
 
         .hero h1 span {
-            color: #5b8cff;
+
+            color: #6491ff;
         }
 
+
         .hero h2 {
-            font-size: 22px;
-            color: #aeb5d1;
+
+            font-size: 25px;
+
+            color: #b8bfdc;
+
             font-weight: normal;
+
             margin-bottom: 20px;
         }
 
+
         .hero p {
-            color: #8f96b0;
-            font-size: 16px;
-            max-width: 600px;
+
+            color: #969ebc;
+
+            font-size: 18px;
+
+            max-width: 650px;
+
             margin: auto;
         }
 
+
         .hero-buttons {
+
             margin-top: 35px;
         }
 
+
         .button {
+
             display: inline-block;
 
-            padding: 13px 30px;
+            padding: 11px 28px;
 
             margin: 5px;
 
-            border-radius: 8px;
+            border-radius: 10px;
+			text-decoration: none;
 
-            text-decoration: none;
+            font-size: 17px;
 
             transition: 0.3s;
         }
 
+
         .primary-button {
+
             background: #315edb;
+
             color: white;
+
+            box-shadow:
+                0 5px 20px
+                rgba(49, 94, 219, 0.25);
         }
+
 
         .primary-button:hover {
-            background: #4b73ed;
+
+            background: #4d75ef;
+
+            transform:
+                translateY(-3px);
         }
+
 
         .secondary-button {
-            border: 1px solid #30395e;
-            color: #cdd3e8;
+
+            border:
+                1px solid #35416c;
+
+            color: #d2d7eb;
         }
 
+
         .secondary-button:hover {
-            background: #11162a;
+
+            background: #12182d;
+
+            border-color: #5873ce;
+
+            transform:
+                translateY(-3px);
         }
+
 
         /* =========================
            GENERAL SECTION
         ========================= */
 
         .section {
-            padding: 90px 7%;
+
+            padding: 95px 7%;
         }
 
+
         .section-title {
+
             text-align: center;
+
             margin-bottom: 50px;
         }
 
+
         .section-title h2 {
-            font-size: 32px;
-            margin-bottom: 10px;
+
+            font-size: 36px;
+
+            margin-bottom: 8px;
         }
 
-        .section-title p {
-            color: #777f9c;
+
+        .section-title h2::after {
+
+            content: "";
+
+            display: block;
+
+            width: 60px;
+
+            height: 3px;
+
+            margin: 10px auto;
+
+            border-radius: 10px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #315edb,
+                    #783fd0
+                );
         }
+
+
+        .section-title p {
+
+            color: #7e87a8;
+
+            font-size: 17px;
+        }
+
 
         /* =========================
            ABOUT
         ========================= */
 
         .about {
-            max-width: 900px;
+
+            max-width: 950px;
+
             margin: auto;
 
-            background: #0d101c;
-border: 1px solid #1b2340;
+            background:
 
-            border-radius: 15px;
+                linear-gradient(
+                    135deg,
+                    rgba(17, 25, 52, 0.9),
+                    rgba(20, 14, 40, 0.9)
+                );
 
-            padding: 40px;
+            border:
+                1px solid #28345e;
 
-            text-align: center;
+            border-radius: 20px;
+
+            padding: 45px;
+
+            box-shadow:
+
+                0 20px 60px
+                rgba(0, 0, 0, 0.25);
         }
+
 
         .about p {
-            color: #a5abc0;
-            font-size: 16px;
+
+            color: #c0c5d9;
+
+            font-size: 19px;
+
+            white-space: pre-line;
         }
+
 
         /* =========================
            CARDS
         ========================= */
 
         .cards {
+
             display: flex;
+
             justify-content: center;
+
             gap: 25px;
+
             flex-wrap: wrap;
         }
 
+
         .card {
-            width: 270px;
 
-            background: #0d101c;
+            width: 280px;
 
-            border: 1px solid #1b2340;
+            background:
 
-            border-radius: 15px;
+                linear-gradient(
+                    145deg,
+                    #0e1427,
+                    #130e25
+                );
 
-            padding: 30px;
+            border:
+                1px solid #252e53;
+
+            border-radius: 18px;
+
+            padding: 32px;
 
             text-align: center;
 
             transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-7px);
 
-            border-color: #315edb;
+        .card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color: #4168d5;
 
             box-shadow:
-                0 10px 30px rgba(0, 0, 0, 0.3);
+
+                0 15px 35px
+                rgba(0, 0, 0, 0.4);
         }
 
+
         .card-icon {
-            font-size: 42px;
+
+            font-size: 45px;
+
             margin-bottom: 15px;
         }
 
+
         .card h3 {
+
+            font-size: 23px;
+
             margin-bottom: 10px;
         }
 
+
         .card p {
-            color: #858ca5;
-            font-size: 14px;
-        }
 
-        /* =========================
-           GALLERY
-        ========================= */
+            color: #8d95b0;
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .gallery-item {
-            width: 250px;
-            height: 250px;
-
-            border-radius: 15px;
-
-            background: linear-gradient(
-                135deg,
-                #10182f,
-                #18102c
-            );
-
-            border: 1px solid #222c50;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: #59627f;
-
-            font-size: 50px;
-        }
-
-        /* =========================
-           MESSAGE
-        ========================= */
-
-        .message {
-            max-width: 800px;
-
-            margin: auto;
-
-            padding: 50px;
-
-            text-align: center;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #101936,
-                    #130e25
-                );
-
-            border-radius: 18px;
-
-            border: 1px solid #28345f;
-        }
-
-        .message h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-
-        .message p {
-            color: #aeb5cf;
             font-size: 16px;
         }
+		
+		/* =========================
+   GALLERY
+========================= */
 
-        /* =========================
-           FOOTER
-        ========================= */
+.gallery-section {
+    margin-top: 70px;
+}
 
-        footer {
-            text-align: center;
+.gallery-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
 
-            padding: 35px 20px;
+.gallery-title h3 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
 
-            background: #05060b;
+.gallery-title p {
+    color: #8e97b5;
+    font-size: 15px;
+}
 
-            border-top: 1px solid #171d32;
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
 
-            color: #68708b;
-        }
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #10182f;
+    border: 1px solid #293765;
+    cursor: pointer;
+    transition: 0.35s ease;
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
 
-        footer strong {
-            color: #7899ff;
-        }
+.gallery-item:hover {
+    transform: translateY(-7px);
+    border-color: #4c65c9;
+    box-shadow:
+        0 20px 45px rgba(49, 94, 219, 0.22);
+}
 
-        /* =========================
-           MOBILE
-        ========================= */
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
 
-        @media (max-width: 700px) {
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
 
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
 
-            nav {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+/* =========================
+   MESSAGE
+========================= */
 
-            .hero h1 {
-                font-size: 40px;
-            }
+.message {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 40px;
+    text-align: center;
 
-            .hero h2 {
-                font-size: 18px;
-            }
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 25, 54, 0.95),
+            rgba(23, 13, 43, 0.95)
+        );
 
-            .section {
-                padding: 65px 5%;
-            }
+    border: 1px solid #303d70;
+    border-radius: 22px;
 
-            .about {
-                padding: 25px;
-            }
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
 
-            .message {
-                padding: 30px 20px;
-            }
+.message h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
 
-        }
+.message p {
+    color: #aeb6d1;
+    line-height: 2;
+    margin-bottom: 25px;
+}
 
-    </style>
+.telegram-button {
+    display: inline-block;
+    padding: 12px 28px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315edb,
+            #7138c8
+        );
+
+    color: white;
+    text-decoration: none;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    transition: 0.3s ease;
+}
+
+.telegram-button:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 10px 30px rgba(49, 94, 219, 0.3);
+}
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    z-index: 9999;
+    padding: 30px;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+
+    border-radius: 16px;
+
+    border: 1px solid #394a91;
+
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, 0.7);
+}
+
+
+/* بستن */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #151d3a;
+    color: white;
+
+    border: 1px solid #394a91;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lightbox-close:hover {
+    background: #315edb;
+    transform: rotate(90deg);
+}
+
+
+/* قبلی و بعدی */
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #151d3a;
+    color: white;
+
+    border: 1px solid #394a91;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.lightbox-prev {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: #7138c8;
+    transform: translateY(-50%) scale(1.08);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    color: #777f9c;
+
+    border-top: 1px solid #202b50;
+
+    margin-top: 80px;
+}
+
+footer span {
+    color: #536dcf;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .profile-circle {
+        width: 145px;
+        height: 145px;
+    }
+
+    .section {
+        padding: 60px 18px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .gallery-item img {
+        height: 180px;
+    }
+
+    .message {
+        margin: 60px 18px;
+        padding: 30px 20px;
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+}
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+.music-player {
+    max-width: 750px;
+    margin: auto;
+    padding: 35px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 25, 54, 0.95),
+            rgba(23, 13, 43, 0.95)
+        );
+
+    border: 1px solid #303d70;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.music-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315edb,
+            #7138c8
+        );
+
+    font-size: 35px;
+
+    box-shadow:
+        0 0 30px rgba(70, 90, 220, 0.35);
+}
+
+.music-info h3 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.music-info p {
+    color: #8e97b5;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.music-player audio {
+    width: 100%;
+    max-width: 600px;
+}
+
+.next-song {
+    margin-top: 25px;
+
+    padding: 10px 25px;
+
+    border: 1px solid #3c4d87;
+    border-radius: 10px;
+
+    background: #10182f;
+    color: #dce3ff;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.next-song:hover {
+    background: #315edb;
+    border-color: #315edb;
+
+    transform: translateY(-3px);
+}
+</style>
 
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -413,36 +928,23 @@ border: 1px solid #1b2340;
 
 <header>
 
-    <div class="logo">
-        <span>A</span>mir
-    </div>
-
     <nav>
 
-        <a href="#home">
-            خانه
-        </a>
+        <a href="#home">خانه</a>
 
-        <a href="#about">
-            درباره من
-        </a>
+        <a href="#about">درباره امیر</a>
 
-        <a href="#interests">
-            علایق
-        </a>
+        <a href="#interests">علاقه‌مندی‌ها</a>
 
-        <a href="#gallery">
-            گالری
-        </a>
+        <a href="#gallery">گالری</a>
 
-        <a href="#message">
-            برای تو
-        </a>
+        <a href="#music">موسیقی</a>
+
+        <a href="#message">برای تو</a>
 
     </nav>
 
 </header>
-
 
 <!-- =========================
      HOME
@@ -450,50 +952,30 @@ border: 1px solid #1b2340;
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="profile-circle">
 
-        <div class="profile-circle">
-            A
-        </div>
-
-        <h1>
-            سلام، من <span>امیر</span> هستم
-        </h1>
-
-        <h2>
-            به دنیای من خوش آمدی 🌙
-        </h2>
-
-        <p>
-            اینجا گوشه‌ای کوچک از دنیای من است؛
-            جایی برای چیزهایی که دوستشان دارم،
-            خاطراتی که برایم ارزشمندند
-            و آدم‌هایی که برایم مهم هستند.
-        </p>
-
-        <div class="hero-buttons">
-
-            <a
-                href="#about"
-                class="button primary-button">
-                بیشتر درباره من
-            </a>
-
-            <a
-                href="#message"
-                class="button secondary-button">
-                یک پیام برای تو
-            </a>
-
-        </div>
+        <img
+            src="images/Amir3.jpg"
+            alt="امیر">
 
     </div>
+
+
+    <h1>
+        سلام، من امیرم 💙
+    </h1>
+
+
+    <p>
+        فوتبال، موسیقی، باشگاه، فیلم
+        و آدمی که دوستش دارم...
+    </p>
 
 </section>
 
 
 <!-- =========================
-     ABOUT
+     ABOUT AMIR
 ========================= -->
 
 <section class="section" id="about">
@@ -501,11 +983,11 @@ border: 1px solid #1b2340;
     <div class="section-title">
 
         <h2>
-            درباره امیر
+            درباره امیر 💙
         </h2>
 
         <p>
-            کمی بیشتر با من آشنا شو
+            کمی بیشتر درباره من
         </p>
 
     </div>
@@ -514,16 +996,78 @@ border: 1px solid #1b2340;
     <div class="about">
 
         <p>
-            این قسمت مخصوص معرفی امیر است.
-            می‌توانیم اینجا درباره شخصیت،
-            علایق، اهداف، کارها و چیزهایی که
-            برایش اهمیت دارند بنویسیم.
+            من امیرم. 💙
+        </p>
+
+        <p>
+            من عاشق فوتبال دیدنم، مخصوصاً فوتبال رئال مادرید. ⚽️🤍
+            اخبار رئال رو تقریباً همیشه دنبال می‌کنم و دوست دارم بدونم
+            چه اتفاقی برای تیم می‌افته، چه کسی قراره بازی کنه،
+            چه نتیجه‌ای گرفته و کلاً چه خبرهایی ازش هست.
+        </p>
+
+        <p>
+            رنگ مورد علاقه‌م آبیه. 💙
+            از اون آدم‌هایی‌ام که موسیقی برایشان خیلی مهمه؛
+            دلم می‌خواد برم باشگاه، تمرین کنم و تا جایی که میشه
+            با آهنگ‌هایی که خودم انتخاب می‌کنم تمرین داشته باشم.
+            دوست دارم هر روز ورزش کنم و حس کنم دارم برای خودم
+            و بدنم کاری انجام می‌دم.
+        </p>
+
+        <p>
+            فیلم دیدن رو هم دوست دارم، ولی راستش وقت زیادی برایش ندارم. 🎬
+        </p>
+
+        <p>
+            یکی از چیزهایی که این مدت خیلی ذهنم رو درگیر کرده،
+            حس «عقب موندن از زندگیه»
+        </p>
+
+        <p>
+            یک سال پشت کنکور موندم و همین باعث شده بعضی وقت‌ها
+            وقتی سر کارم، حس خوبی نداشته باشم و فکر کنم بقیه جلوتر
+            از من حرکت کردن و من ازشون عقب افتادم.
+        </p>
+
+        <p>
+            ولی شاید چیزی که بیشتر از همه منو تعریف می‌کنه،
+            همین تلاش برای ادامه دادنه؛ حتی وقتی خودم فکر می‌کنم دیر شده.
+        </p>
+
+        <p>
+            من دوست دارم با کسی که برام مهمه حرف بزنم.
+            خیلی.
+            و یکی از آدم‌هایی که دوست دارم همیشه باهاش حرف بزنم،
+            نجمست. 🩵
+        </p>
+
+        <p>
+            دوست دارم کنارش باشم، باهاش حرف بزنم،
+            باهاش درس بخونم و وقتی حالش خوب نیست کنارش باشم.
+            بودنش برای من فقط یک گفت‌وگوی معمولی نیست؛
+            یه جور آرامشه.
+        </p>
+
+        <p>
+            من شاید همیشه نتونم دقیق بگم توی ذهنم چی می‌گذره،
+            اما چیزهایی که دوست دارم ساده‌اند:
+            فوتبال، رئال مادرید، موسیقی، باشگاه، فیلم،
+            پیشرفت کردن، و آدمی که دوستش دارم.
+        </p>
+
+        <p>
+            من امیرم؛
+            پسری که گاهی فکر می‌کنه از زندگی عقب افتاده،
+            اما هنوز دلش می‌خواد جلو بره.
+            هنوز هدف داره.
+            هنوز چیزهایی هست که براش هیجان‌انگیزه.
+            و هنوز آدمی هست که دوست داره هر روز باهاش حرف بزنه. 💙
         </p>
 
     </div>
 
 </section>
-
 
 <!-- =========================
      INTERESTS
@@ -534,11 +1078,11 @@ border: 1px solid #1b2340;
     <div class="section-title">
 
         <h2>
-            چیزهایی که دوست دارم
+            علاقه‌مندی‌های من 💙
         </h2>
 
         <p>
-            علایق و سرگرمی‌ها
+            چیزهایی که دوست دارم
         </p>
 
     </div>
@@ -546,6 +1090,29 @@ border: 1px solid #1b2340;
 
     <div class="cards">
 
+
+        <!-- FOOTBALL -->
+
+        <div class="card">
+
+            <div class="card-icon">
+                ⚽
+            </div>
+
+            <h3>
+                فوتبال
+            </h3>
+
+            <p>
+                عاشق فوتبال دیدنم، مخصوصاً بازی‌های رئال مادرید.
+                اخبار تیم رو دنبال می‌کنم و دوست دارم همیشه
+                بدونم چه اتفاقی برای رئال افتاده.
+            </p>
+
+        </div>
+
+
+        <!-- MUSIC -->
 
         <div class="card">
 
@@ -558,45 +1125,49 @@ border: 1px solid #1b2340;
             </h3>
 
             <p>
-                اینجا می‌توانیم
-                سبک‌ها و آهنگ‌های موردعلاقه
-                امیر را قرار دهیم.
+                موسیقی برای من خیلی مهمه.
+                مخصوصاً وقتی ورزش می‌کنم دوست دارم
+                با آهنگ‌هایی که خودم انتخاب کردم تمرین کنم.
             </p>
 
         </div>
 
 
+        <!-- GYM -->
+
         <div class="card">
 
             <div class="card-icon">
-                🎮
+                🏋️
             </div>
 
             <h3>
-                بازی
+                باشگاه
             </h3>
 
             <p>
-                بازی‌های موردعلاقه،
-                خاطرات بازی و چیزهای جذاب.
+                دوست دارم هر روز ورزش کنم و تمرین داشته باشم.
+                برام مهمه که برای خودم و بدنم وقت بذارم.
             </p>
 
         </div>
 
 
+        <!-- MOVIE -->
+
         <div class="card">
 
             <div class="card-icon">
-                📷
+                🎬
             </div>
 
             <h3>
-                خاطرات
+                فیلم
             </h3>
 
             <p>
-                عکس‌ها و لحظه‌هایی
-                که ارزش نگه‌داشتن دارند.
+                فیلم دیدن رو دوست دارم،
+                حتی اگر این روزها وقت زیادی برای فیلم دیدن نداشته باشم.
             </p>
 
         </div>
@@ -605,7 +1176,6 @@ border: 1px solid #1b2340;
     </div>
 
 </section>
-
 
 <!-- =========================
      GALLERY
@@ -616,29 +1186,243 @@ border: 1px solid #1b2340;
     <div class="section-title">
 
         <h2>
-            گالری
+            گالری عکس‌ها 📸
         </h2>
 
         <p>
-            لحظه‌های ماندگار
+            مجموعه‌ای از عکس‌های امیر، اینفوگرافیک‌ها و خاطرات ما
         </p>
 
     </div>
 
 
-    <div class="gallery">
+    <!-- =========================
+         AMIR GALLERY
+    ========================= -->
 
-        <div class="gallery-item">
-            📷
+    <div class="gallery-section">
+
+        <div class="gallery-title">
+
+            <h3>
+                عکس‌های امیر 💙
+            </h3>
+
+            <p>
+                چندتا از عکس‌های امیر
+            </p>
+
         </div>
 
-        <div class="gallery-item">
-            🌌
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="images/Amir.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir2.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir3.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir4.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir5.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir6.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir7.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir8.jpg" alt="امیر">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Amir9.jpg" alt="امیر">
+            </div>
+
         </div>
 
-        <div class="gallery-item">
-            ✨
+    </div>
+
+
+    <!-- =========================
+         INFOGRAPHIC GALLERY
+    ========================= -->
+
+    <div class="gallery-section">
+
+        <div class="gallery-title">
+
+            <h3>
+                اینفوگرافیک‌ها 📊
+            </h3>
+
+            <p>
+                تصاویر و اینفوگرافیک‌های من
+            </p>
+
         </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img
+                    src="images/Infographic.jpg"
+                    alt="اینفوگرافیک">
+            </div>
+
+            <div class="gallery-item">
+                <img
+                    src="images/Infographic2.jpg"
+                    alt="اینفوگرافیک">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         US GALLERY
+    ========================= -->
+
+    <div class="gallery-section">
+
+        <div class="gallery-title">
+
+            <h3>
+                خاطرات ما 🩵
+            </h3>
+
+            <p>
+                عکس‌های من و امیر
+            </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+            <div class="gallery-item">
+                <img src="images/Us.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us2.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us3.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us4.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us5.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us6.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us7.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us8.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us9.jpg" alt="ما">
+            </div>
+
+            <div class="gallery-item">
+                <img src="images/Us10.jpg" alt="ما">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<section class="section" id="music">
+
+    <div class="section-title">
+
+        <h2>
+            موسیقی‌های من 🎵💙
+        </h2>
+
+        <p>
+            بعضی آهنگ‌ها فقط آهنگ نیستند؛
+            یک خاطره‌اند...
+        </p>
+
+    </div>
+
+
+    <div class="music-player">
+
+        <div class="music-icon">
+            🎵
+        </div>
+
+
+        <div class="music-info">
+
+            <h3 id="songTitle">
+                باران می‌آید امشب
+            </h3>
+
+            <p id="songDescription">
+                یک آهنگ برای لحظه‌های آرام 🌙
+            </p>
+
+        </div>
+
+
+        <audio
+            id="audioPlayer"
+            controls>
+
+            <source
+                src="music/Omid - Baran Miarad Emshab (320).mp3"
+                type="audio/mpeg">
+
+            مرورگر شما از پخش موسیقی پشتیبانی نمی‌کند.
+
+        </audio>
+
+
+        <button
+            class="next-song"
+            onclick="changeSong()">
+
+            🎵 آهنگ بعدی
+
+        </button>
 
     </div>
 
@@ -654,19 +1438,70 @@ border: 1px solid #1b2340;
     <div class="message">
 
         <h2>
-            برای تو 💙
+            برای تو 🩵
         </h2>
 
         <p>
-            بعضی آدم‌ها فقط یک نفر در زندگی نیستند؛
-            بخشی از خاطرات، آرامش و لبخندهای ما هستند.
-            این قسمت را می‌توانیم با یک متن
-            مخصوص امیر پر کنیم.
+            بعضی آدم‌ها فقط وارد زندگی آدم نمی‌شوند؛
+            بخشی از خاطرات و آرامش آدم می‌شوند. 💙
         </p>
+
+
+        <a
+            class="telegram-button"
+            href="https://t.me/Amir_mmd_0013"
+            target="_blank">
+
+            💙 پیام به امیر در تلگرام
+
+        </a>
 
     </div>
 
 </section>
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox" id="lightbox">
+
+    <button
+        class="lightbox-close"
+        id="lightboxClose"
+        aria-label="بستن">
+
+        ×
+
+    </button>
+
+
+    <button
+        class="lightbox-prev"
+        id="lightboxPrev"
+        aria-label="عکس قبلی">
+
+        ‹
+
+    </button>
+
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="نمایش بزرگ عکس">
+
+
+    <button
+        class="lightbox-next"
+        id="lightboxNext"
+        aria-label="عکس بعدی">
+
+        ›
+
+    </button>
+
+</div>
 
 
 <!-- =========================
@@ -675,20 +1510,278 @@ border: 1px solid #1b2340;
 
 <footer>
 
-    ساخته شده با ❤️ برای
-
-    <strong>
-        امیر
-    </strong>
+    ساخته شده با 💙 برای امیر
 
     <br>
 
-    © ۱۴۰۵ - تمام حقوق محفوظ است
+    <span>
+        © 2026
+    </span>
 
 </footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   MUSIC
+========================= */
+
+const songs = [
+
+    {
+        title: "باران می‌آید امشب",
+        description: "یک آهنگ برای لحظه‌های آرام 🌙",
+        file: "music/Omid - Baran Miarad Emshab (320).mp3"
+    },
+
+    {
+        title: "الف",
+        description: "یک آهنگ خاطره‌ای برای من و امیر 💙",
+        file: "music/iraj_khajeh_amiri_alef 128.mp3"
+    }
+
+];
+
+
+let currentSong = 0;
+
+
+function changeSong() {
+
+    currentSong++;
+
+    if (currentSong >= songs.length) {
+        currentSong = 0;
+    }
+
+
+    const player =
+        document.getElementById("audioPlayer");
+
+    const title =
+        document.getElementById("songTitle");
+
+    const description =
+        document.getElementById("songDescription");
+
+
+    title.textContent =
+        songs[currentSong].title;
+
+
+    description.textContent =
+        songs[currentSong].description;
+
+
+    player.src =
+        songs[currentSong].file;
+
+
+    player.play();
+
+}
+
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+const galleryItems =
+    document.querySelectorAll(".gallery-item");
+
+
+const lightbox =
+    document.getElementById("lightbox");
+
+
+const lightboxImage =
+    document.getElementById("lightboxImage");
+
+
+const lightboxClose =
+    document.getElementById("lightboxClose");
+
+
+const lightboxPrev =
+    document.getElementById("lightboxPrev");
+
+
+const lightboxNext =
+    document.getElementById("lightboxNext");
+
+
+let currentImages = [];
+
+let currentIndex = 0;
+
+
+/* باز کردن عکس */
+
+galleryItems.forEach(function(item) {
+
+    item.addEventListener("click", function() {
+
+        const gallery =
+            item.parentElement;
+
+        const images =
+            gallery.querySelectorAll("img");
+
+
+        currentImages =
+            Array.from(images);
+
+
+        currentIndex =
+            currentImages.indexOf(
+                item.querySelector("img")
+            );
+
+
+        showImage();
+
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+
+/* نمایش عکس */
+
+function showImage() {
+
+    lightboxImage.src =
+        currentImages[currentIndex].src;
+
+    lightboxImage.alt =
+        currentImages[currentIndex].alt;
+
+}
+
+
+/* عکس بعدی */
+
+lightboxNext.addEventListener(
+    "click",
+    function(event) {
+
+        event.stopPropagation();
+
+        currentIndex++;
+
+        if (currentIndex >= currentImages.length) {
+            currentIndex = 0;
+        }
+
+        showImage();
+
+    }
+);
+
+
+/* عکس قبلی */
+
+lightboxPrev.addEventListener(
+    "click",
+    function(event) {
+
+        event.stopPropagation();
+
+        currentIndex--;
+
+        if (currentIndex < 0) {
+            currentIndex = currentImages.length - 1;
+        }
+
+        showImage();
+
+    }
+);
+
+
+/* بستن */
+
+lightboxClose.addEventListener(
+    "click",
+    function() {
+
+        lightbox.classList.remove("active");
+
+    }
+);
+
+
+/* کلیک روی فضای بیرون عکس */
+
+lightbox.addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === lightbox) {
+
+            lightbox.classList.remove("active");
+
+        }
+
+    }
+);
+
+
+/* کیبورد */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (!lightbox.classList.contains("active")) {
+            return;
+        }
+
+
+        if (event.key === "Escape") {
+		lightbox.classList.remove("active");
+
+        }
+
+
+        if (event.key === "ArrowRight") {
+
+            currentIndex++;
+
+            if (currentIndex >= currentImages.length) {
+                currentIndex = 0;
+            }
+
+            showImage();
+
+        }
+
+
+        if (event.key === "ArrowLeft") {
+
+            currentIndex--;
+
+            if (currentIndex < 0) {
+                currentIndex = currentImages.length - 1;
+            }
+
+            showImage();
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
 
 </html>
-
+		
